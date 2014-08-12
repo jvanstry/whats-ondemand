@@ -1,0 +1,22 @@
+{
+  "name": "whats-ondemand",
+  "version": "0.0.0",
+  "description": "app that shows what is currently available on time warner ondemand movies accompanied by rotten tomatoes scores",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvanstry/whats-ondemand.git"
+  },
+  "keywords": [
+    "movies"
+  ],
+  "author": "Jerry VanStrydonck <jvanstry@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvanstry/whats-ondemand/issues"
+  },
+  "homepage": "https://github.com/jvanstry/whats-ondemand"
+}
