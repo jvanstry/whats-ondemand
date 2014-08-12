@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "app that shows what is currently available on time warner ondemand movies accompanied by rotten tomatoes scores",
   "main": "server.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "devDependencies": {
   },
   "dependencies": {
