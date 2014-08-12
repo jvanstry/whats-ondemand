@@ -1,8 +1,6 @@
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
-
-var TWC_ONDEMAND_URL = 'http://www.twcondemand.com/movies/movies-on-demand';
 var app = express();
 
 app.set('port', process.env.PORT || 4114);
