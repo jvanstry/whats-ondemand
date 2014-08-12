@@ -4,6 +4,7 @@
   "description": "app that shows what is currently available on time warner ondemand movies accompanied by rotten tomatoes scores",
   "main": "server.js",
   "devDependencies": {
+    "mocha": "^1.21.4"
   },
   "dependencies": {
     "cheerio": "^0.17.0",
