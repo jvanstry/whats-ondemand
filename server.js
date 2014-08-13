@@ -15,3 +15,6 @@ app.get('/', function(req, res){
 
 app.listen(app.get('port'));
 console.log('listening on port' + app.get('port'));
+
+// start scraping the sites for data
+require('./scripts/updater')();
