@@ -2,7 +2,6 @@ var request = require('request');
 var rtApiKey = require('../rt-api-key');
 var save = require('./save-movies');
 
-
 module.exports = function(movieTitles){
   var moviesWithRatings = timeoutLoop(0, movieTitles, [], save);
 };
