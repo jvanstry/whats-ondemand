@@ -1,9 +1,10 @@
 var fs = require('fs');
+var MOVIE_DATA_FILE = 'data.json';
 
 module.exports = function(movies){
   var stringMovies = JSON.stringify(movies);
 
-  fs.writeFile('data.json', stringMovies, function(err){
+  fs.writeFile(MOVIE_DATA_FILE, stringMovies, function(err){
     if(err){
       throw err;
     }
