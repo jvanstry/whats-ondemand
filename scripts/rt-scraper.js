@@ -18,19 +18,23 @@ function urlBuilder(movieName){
 //   is made. Also need to check each time if have come to end of movies array
 function timeoutLoop(i, movieTitles, moviesWithRatings, cb){
   setTimeout(function(){
+    console.log(movieTitles);
     for(var temp = i; i < temp + 5 && i < movieTitles.length; i++){
       var title = movieTitles[i];
       var url = urlBuilder(title);
 
       request(url, function(err, rtResponse, data){
+        console.log(data)
         var json = JSON.parse(data);
-        var movieJson = json.movies[0];
-        var movie = {
-          critics: movieJson.ratings.critics_score,
-          title: movieJson.title,
-          audience: movieJson.ratings.audience_score
+        var movieJson = json.movies == [] ? json.movies[0] : { ratings: undefined };
+        var movie = {};
+
+        if(movieJson.ratings){
+            movie.critics = movieJson.ratings.critics_score;
+            movie.title = movieJson.title;
+            movie.audience = movieJson.ratings.audience_score;
         }
-        
+
         moviesWithRatings.push(movie);
 
         if(moviesWithRatings.length === movieTitles.length){
