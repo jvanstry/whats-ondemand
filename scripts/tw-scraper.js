@@ -12,7 +12,9 @@ module.exports = function(cb){
       var lastCharacterInTitle = movieTitle.slice(-1);
 
     // Filter out HD or "(Unedited)" movies in order to avoid duplication
-      if(!(lastCharacterInTitle === 'D' || lastCharacterInTitle === ')')){
+    // Also check for blatant duplication because that seems to happen
+      if(!(lastCharacterInTitle === 'D' || lastCharacterInTitle === ')')
+          && availableMovies.indexOf(movieTitle) == -1){
         availableMovies.push(movieTitle);
       }
     });
