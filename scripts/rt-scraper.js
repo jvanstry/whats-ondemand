@@ -13,13 +13,14 @@ function urlBuilder(movieName){
   return url;
 };
 
-// Rotten tomatoes limits requests to 5 per second, so this setTimeout is
-//   necessary to pause the requests for a short while each time 5 requests
+// Rotten tomatoes limits requests  per second, so this setTimeout is
+//   necessary to pause the requests for a short while each time 2 requests
 //   is made. Also need to check each time if have come to end of movies array
+// This requests per second seems to change frequently so keep this in
 function timeoutLoop(i, movieTitles, moviesWithRatings, cb){
   setTimeout(function(){
     console.log(movieTitles);
-    for(var temp = i; i < temp + 5 && i < movieTitles.length; i++){
+    for(var temp = i; i < temp + 2 && i < movieTitles.length; i++){
       var title = movieTitles[i];
       var url = urlBuilder(title);
 
